@@ -23,8 +23,8 @@ class testimoniController extends Controller
         $image->storePubliclyAs('public/person', $filename);
 
         // Kembalikan path
-        return URL::to('/') . '/storage/' . $path . '/' . $filename;
-        // return URL::to('/') . '/kurniadev/storage/app/public/' . $path . '/' . $filename;
+        // return URL::to('/') . '/storage/' . $path . '/' . $filename;
+        return URL::to('/') . '/frontend-electronic-services/storage/app/public/' . $path . '/' . $filename;
 
     }
     public function index()

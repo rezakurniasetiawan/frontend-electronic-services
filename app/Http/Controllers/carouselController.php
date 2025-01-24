@@ -23,8 +23,8 @@ class carouselController extends Controller
         $image->storePubliclyAs('public/carousel', $filename);
 
         // Kembalikan path
-        return URL::to('/') . '/storage/' . $path . '/' . $filename;
-        // return URL::to('/') . '/kurniadev/storage/app/public/' . $path . '/' . $filename;
+        // return URL::to('/') . '/storage/' . $path . '/' . $filename;
+        return URL::to('/') . '/frontend-electronic-services/storage/app/public/' . $path . '/' . $filename;
 
     }
 
