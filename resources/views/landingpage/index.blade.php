@@ -22,13 +22,13 @@
     @include('landingpage.sections.services')
 
     <!-- Appointment Section -->
-    @include('landingpage.sections.appointment')
+    {{-- @include('landingpage.sections.appointment') --}}
 
     <!-- Testimonials Section -->
     @include('landingpage.sections.testimonials')
 
     <!-- Gallery Section -->
-    @include('landingpage.sections.gallery')
+    {{-- @include('landingpage.sections.gallery') --}}
 
     <!-- Contact Section -->
     @include('landingpage.sections.contact')
