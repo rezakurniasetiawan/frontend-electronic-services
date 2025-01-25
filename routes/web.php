@@ -23,7 +23,7 @@ use App\Http\Controllers\testimoniController;
 
 
 Route::get('/', [landingpageController::class, 'landingpage'])->name('landingpage.index');
-Route::get('/signin', [authController::class, 'login'])->name('login');
+Route::get('/login', [authController::class, 'login'])->name('login');
 Route::post('/loginaction', [authController::class, 'actionlogin'])->name('auth.actionlogin');
 Route::post('/logout', [authController::class, 'actionlogout'])->name('auth.actionlogout');
 

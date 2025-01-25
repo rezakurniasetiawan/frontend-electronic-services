@@ -9,7 +9,7 @@
                     <p>Tim kami siap melayani Anda 24/7 untuk menangani masalah AC atau elektronik lainnya mendesak.
                         Hubungi hotline darurat kami, dan teknisi berpengalaman akan segera datang untuk membantu Anda!.
                     </p>
-                    <a class="cta-btn" href="#appointment">Hubungi Kami</a>
+                    <a class="cta-btn" href="https://wa.me/6285646663337">Hubungi Kami</a>
                 </div>
             </div>
         </div>
