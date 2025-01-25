@@ -6,7 +6,7 @@
             </a>
             <div class="footer-contact pt-3">
                 <p>Jl Pisang Candi Barat No 17b Kec.sukun Kab.Malang</p>
-                <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+                <p class="mt-3"><strong>Phone:</strong> <span>+6285-646-663-337</span></p>
             </div>
         </div>
 
