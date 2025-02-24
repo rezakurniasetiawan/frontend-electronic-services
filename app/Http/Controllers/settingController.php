@@ -15,6 +15,18 @@ class settingController extends Controller
 
     public function update(Request $request, $id)
     {
+        $data = Setting::where('id_setting', $id)->first();
+
+        return view('dashboard.features.setting.update_setting', compact('data'));
+    }
+
+    public function updated(Request $request, $id)
+    {
+        // 'address',
+        // 'phone',
+        // 'email',
+        // 'embed_map',
+
         $request->validate([
             'address' => 'required',
             'phone' => 'required',
@@ -29,7 +41,7 @@ class settingController extends Controller
             'embed_map' => $request->embed_map,
         ];
 
-        setting::where('id', $id)->update($data);
-        return redirect()->route('setting.index')->with('success', 'Data berhasil diubah');
+        setting::where('id_setting', $id)->update($data);
+        return redirect()->route('settings.index')->with('success', 'Data berhasil diubah');
     }
 }

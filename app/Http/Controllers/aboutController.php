@@ -41,7 +41,9 @@ class aboutController extends Controller
             'about_description' => 'required',
         ]);
 
-        $image = $this->saveImage($request->about_image, 'about');
+        $about = about::where('id_about', $id)->first();
+
+        $image = $request->about_image ? $this->saveImage($request->about_image, 'about') : $about->about_image;
 
         $data = [
             'about_title' => $request->about_title,

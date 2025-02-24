@@ -7,18 +7,7 @@
                     <h5 class="card-title fw-semibold mb-0">Pengaturan</h5>
                 </div>
                 <div class="col-auto">
-                    <button class="btn btn-primary" id="editButton">Edit</button>
-                    <button class="btn btn-danger d-none" id="cancelButton">Batal</button>
-                    <button class="btn btn-success d-none" id="saveButton">Simpan</button>
-                    <form action="{{ route('settings.update', [$data->id_setting]) }}" method="POST" class="d-none">
-                        @csrf
-                        @method('PUT')
-                        <input type="hidden" name="address" id="formAddress">
-                        <input type="hidden" name="phone" id="formPhone">
-                        <input type="hidden" name="email" id="formEmail">
-                        <input type="hidden" name="embed_map" id="formEmbedMap">
-                    </form>
-
+                    <a href="{{ route('settings.update', [$data->id_setting]) }}" class="btn btn-primary" id="editButton">Edit</a>
                 </div>
             </div>
             <div class="row mb-3">
@@ -66,38 +55,4 @@
             </div>
         </div>
     </div>
-
-    <script>
-        document.getElementById('editButton').addEventListener('click', function() {
-            var inputs = document.querySelectorAll('input');
-            inputs.forEach(function(input) {
-                input.disabled = false;
-            });
-            document.getElementById('editButton').classList.add('d-none');
-            document.getElementById('saveButton').classList.remove('d-none');
-            document.getElementById('cancelButton').classList.remove('d-none');
-        });
-
-        document.getElementById('saveButton').addEventListener('click', function() {
-            // Add your save logic here
-            alert('Data saved!');
-            var inputs = document.querySelectorAll('input');
-            inputs.forEach(function(input) {
-                input.disabled = true;
-            });
-            document.getElementById('editButton').classList.remove('d-none');
-            document.getElementById('saveButton').classList.add('d-none');
-            document.getElementById('cancelButton').classList.add('d-none');
-        });
-
-        document.getElementById('cancelButton').addEventListener('click', function() {
-            var inputs = document.querySelectorAll('input');
-            inputs.forEach(function(input) {
-                input.disabled = true;
-            });
-            document.getElementById('editButton').classList.remove('d-none');
-            document.getElementById('saveButton').classList.add('d-none');
-            document.getElementById('cancelButton').classList.add('d-none');
-        });
-    </script>
 @endsection

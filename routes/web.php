@@ -51,6 +51,7 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::delete('/testimonials/destroy/{id}', [testimoniController::class, 'destroy'])->name('testimonials.destroy');
 
         Route::get('/settings', [settingController::class, 'index'])->name('settings.index');
-        Route::put('/settings/update/{id}', [settingController::class, 'update'])->name('settings.update');
+        Route::get('/settings/update/{id}', [settingController::class, 'update'])->name('settings.update');
+        Route::post('/settings/updated/{id}', [settingController::class, 'updated'])->name('settings.updated');
     });
 });
